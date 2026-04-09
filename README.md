@@ -5,7 +5,8 @@ This repository contains the source scripts and a lightweight CPU-based Streamli
 
 Further information can be obtained by writing to Arka Bhowmik (arkabhowmik@yahoo.co.uk).
 
-![desktop_app_version](https://github.com/user-attachments/assets/5db82e26-bb12-4649-9da1-ba124fe66cb4)
+![desktop_app](https://github.com/user-attachments/assets/c6722515-47a0-460f-a253-7b8bc9f323c3)
+
 
 ## ⊞ Windows app (follow the steps below to create the `.exe` file)
 
