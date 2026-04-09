@@ -70,4 +70,9 @@ cp /output/roc.png /data/       (only applicable for list of images)
 This will save the output files in the mounted folder "/Users/Arka/Desktop/image_dataset".
 
 
-##### Note: For restricted server (*see* [Steps](https://github.com/Arka-Bhowmik/MRI_triage_app/blob/main/tempDir/README.md)).
+##### Note:
+- The EXE is one file, but the Whisper model itself is still downloaded on first use and then cached locally by `faster-whisper`.
+- Default model: `small.en`
+- Default device: `cpu`
+- Default compute type: `int8`
+- The Help image <img width="20" height="20" alt="Help_picture" src="https://github.com/user-attachments/assets/498e33cd-80a1-4f57-a6f1-7e82978b67b6" /> saves a local copy of the bundled help PDF.
