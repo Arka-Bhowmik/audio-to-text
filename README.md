@@ -1,7 +1,7 @@
 # Audio-to-text
 Tiny streamlit app or windows app to convert pre-recorded audio or live recording into text file
 
-This repository contains the source scripts and a lightweight CPU-based Streamlit/Windows app for converting pre-recorded audio files (.wav, .mp3, .m4a, .mp4, .webm, .ogg, .flac, .aac) and microphone-recorded audio into text. A Windows desktop version of the app can be created using the options described below, while the Streamlit version can be run in any Python virtual environment, also described below.
+This repository contains the source scripts and a lightweight CPU-based Streamlit/Windows app for converting pre-recorded audio files (.wav, .mp3, .m4a, .mp4, .webm, .ogg, .flac, .aac) and microphone-recorded audio into text (output: .txt or .docx). A Windows desktop version of the app can be created using the options described below, while the Streamlit version can be run in any Python virtual environment, also described below.
 
 Further information can be obtained by writing to Arka Bhowmik (arkabhowmik@yahoo.co.uk).
 
@@ -10,21 +10,30 @@ Further information can be obtained by writing to Arka Bhowmik (arkabhowmik@yaho
 ## ⊞  Window app (follow below to create .exe file)
 Users can simply use the files (main\win_audio2text\) and use following steps to create an exe file:
 
-#### Step I: Download App Files 
-[MRI_triage_app](https://drive.google.com/file/d/1N9k4Le-vWJWAuTUiGJM-GX2C4uM8Q1aH/view?usp=sharing) and start docker engine in local machine by running docker desktop
-
-#### Step II: Load the downloaded Docker Image 
-Open command prompt(Win)
+#### Step I: Download and install python 
+Open command prompt (Win)
+```
+winget install Python.Python.3.12
+python --version   (for check installed properly)
+pip --version   (for check installed properly)
+```
+*Copy the files from /main/win_audio2text --> C:\Users\Arka\win_audio2text*
+#### Step II: Build the .bat file inside win_audio2text to create onefile EXE 
+In command prompt (Win)
 ```
 python -m venv venv
 venv\Scripts\activate
 cd C:\Users\Arka\win_audio2text\
 build_exe.bat
 ```
-*The image will appear in dashboard of Docker desktop after completion of loading.*
+*Executing the above create onefile exe under C:\Users\Arka\win_audio2text\dist\AudioToText.exe image.*
 
-#### Step IV: RUN the downloaded Docker Image 
-Now, in the command prompt(Win) or terminal(Mac/Linux)
+#### Step III: RUN the created onefile exe 
+- Double-click `AudioToText.exe` in dist folder under `C:\Users\Arka\win_audio2text\dist\`
+- The app opens directly as a desktop window
+- No browser and no Streamlit server are needed
+
+- 
 ```
 docker run -v "/c/Users/Arka/Desktop/image_dataset":/data -p 5000:5000 mri_triage:latest    (window command)
 docker run -v "/Users/Arka/Desktop/image_dataset":/data -p 5000:5000 mri_triage:latest      (other OS)
