@@ -56,34 +56,7 @@ C:\Users\YourName\win_audio2text\dist\AudioToText.exe
 ## ✨ Streamlit app (follow the steps below to run the app)
 
 Users can use the files in `main\streamlit_audio2text\` and follow these steps to run the app.
-
 ```
-docker run -v "/c/Users/Arka/Desktop/image_dataset":/data -p 5000:5000 mri_triage:latest    (window command)
-docker run -v "/Users/Arka/Desktop/image_dataset":/data -p 5000:5000 mri_triage:latest      (other OS)
+xyz
 ```
 *This will provide an url (e.g., "http://0.0.0.0:5000") for the app that can be copied to the browser of local machine.* In the above command, use an appropriate path for -v "/path/" to mount the raw data or image path of the local machine with the docker container that can be accessed inside docker from /data.
-
-#### Step V: Modify Image Path in CSV
-The app runs inference for single image or batch of NIFTI images. Batch of images are accepted by the app in the form of a file with extension (.csv or .xlsx) having the absolute image paths ordered in row (*see* input folder for csv headers). The uploaded csv file should have same header to avoid error while the app attempt to save the probabilities.
-```
-Also modify all "File_path" column in CSV/XLSX during batch run
-(e.g., C:/Users/Arka/Desktop/image_dataset/XYZ/abc.nii.gz   to   /data/XYZ/abc.nii.gz)
-since docker already mounted /c/Users/Arka/Desktop/image_dataset/    as    /data   in step IV
-```
-Next, upload the .xlsx or .csv file and run the inference.
-
-#### Step VI: COPY output files
-The app saves output "probability.csv" and ROC plot in folder output. The app only generate "roc.png" if the ground truth positive or negative is greater than #15. The saved output files can be copied from docker container from Docker desktop dashboard terminal (*see* [output](https://github.com/Arka-Bhowmik/MRI_triage_app/tree/main/output)). 
-```
-cp /output/probability.csv /data/
-cp /output/roc.png /data/       (only applicable for list of images)
-```
-This will save the output files in the mounted folder "/Users/Arka/Desktop/image_dataset".
-
-
-##### Note:
-- The EXE is one file, but the Whisper model itself is still downloaded on first use and then cached locally by `faster-whisper`.
-- Default model: `small.en`
-- Default device: `cpu`
-- Default compute type: `int8`
-- The Help image <img width="20" height="20" alt="Help_picture" src="https://github.com/user-attachments/assets/498e33cd-80a1-4f57-a6f1-7e82978b67b6" /> saves a local copy of the bundled help PDF.
