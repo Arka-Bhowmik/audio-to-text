@@ -7,33 +7,42 @@ Further information can be obtained by writing to Arka Bhowmik (arkabhowmik@yaho
 
 ![desktop_app_version](https://github.com/user-attachments/assets/5db82e26-bb12-4649-9da1-ba124fe66cb4)
 
-## ⊞  Window app (follow below to create .exe file)
-Users can simply use the files (main\win_audio2text\) and use following steps to create an exe file:
+## ⊞ Windows app (follow the steps below to create the `.exe` file)
 
-#### Step I: Download and install python 
-Open command prompt (Win)
-```
+Users can use the files in `main\win_audio2text\` and follow these steps to create the EXE file.
+
+#### Step I: Download and install Python
+Open **Command Prompt** on Windows and run:
+
+```cmd
 winget install Python.Python.3.12
-python --version   (for check installed properly)
-pip --version   (for check installed properly)
+python --version
+pip --version
+```
+Use python --version and pip --version to confirm that Python was installed correctly. Next, copy the downloaded files from *main\win_audio2text\* to:
+```
+C:\Users\YourName\win_audio2text
 ```
 *Copy the files from /main/win_audio2text --> C:\Users\Arka\win_audio2text*
-#### Step II: Build the .bat file inside win_audio2text to create onefile EXE 
-In command prompt (Win)
-```
+#### Step II: Build the .bat file inside win_audio2text to create the one-file EXE
+
+In Command Prompt, run:
+```cmd
+cd C:\Users\YourName\win_audio2text\
 python -m venv venv
 venv\Scripts\activate
-cd C:\Users\Arka\win_audio2text\
 build_exe.bat
 ```
-*Executing the above create onefile exe under C:\Users\Arka\win_audio2text\dist\AudioToText.exe image.*
-
-#### Step III: RUN the created onefile exe 
-- Double-click `AudioToText.exe` in dist folder under `C:\Users\Arka\win_audio2text\dist\`
+Executing the above commands creates the one-file EXE at:
+```
+C:\Users\YourName\win_audio2text\dist\AudioToText.exe
+```
+#### Step III: Run the created one-file EXE
+- Double-click `AudioToText.exe` in `C:\Users\YourName\win_audio2text\dist\`
 - The app opens directly as a desktop window
-- No browser and no Streamlit server are needed
+- No browser or Streamlit server is required
 
-- 
+
 ```
 docker run -v "/c/Users/Arka/Desktop/image_dataset":/data -p 5000:5000 mri_triage:latest    (window command)
 docker run -v "/Users/Arka/Desktop/image_dataset":/data -p 5000:5000 mri_triage:latest      (other OS)
