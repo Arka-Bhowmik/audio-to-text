@@ -19,13 +19,13 @@ winget install Python.Python.3.12
 python --version
 pip --version
 ```
-Use python --version and pip --version to confirm that Python was installed correctly. Next, copy the downloaded files from *main\win_audio2text\* to:
+Use python --version and pip --version to confirm that Python was installed correctly. 
+
+#### Step II: Copy the downloaded files from *main\win_audio2text\* to:
 ```
 C:\Users\YourName\win_audio2text
 ```
-*Copy the files from /main/win_audio2text --> C:\Users\Arka\win_audio2text*
-#### Step II: Build the .bat file inside win_audio2text to create the one-file EXE
-
+#### Step III: Build the .bat file inside win_audio2text to create the one-file EXE
 In Command Prompt, run:
 ```cmd
 cd C:\Users\YourName\win_audio2text\
@@ -37,11 +37,14 @@ Executing the above commands creates the one-file EXE at:
 ```
 C:\Users\YourName\win_audio2text\dist\AudioToText.exe
 ```
-#### Step III: Run the created one-file EXE
+#### Step IV: Run the created one-file EXE
 - Double-click `AudioToText.exe` in `C:\Users\YourName\win_audio2text\dist\`
 - The app opens directly as a desktop window
 - No browser or Streamlit server is required
 
+## ✨ Streamlit app (follow the steps below to run the app)
+
+Users can use the files in `main\streamlit_audio2text\` and follow these steps to run the app.
 
 ```
 docker run -v "/c/Users/Arka/Desktop/image_dataset":/data -p 5000:5000 mri_triage:latest    (window command)
