@@ -48,7 +48,7 @@ C:\Users\YourName\win_audio2text\dist\AudioToText.exe
 - Default model: `small.en`
 - Default device: `cpu`
 - Default compute type: `int8`
-- The Help image <img width="20" height="20" alt="Help_picture" src="https://github.com/user-attachments/assets/498e33cd-80a1-4f57-a6f1-7e82978b67b6" /> saves a local copy of the bundled help PDF.
+- The Help image <img width="30" height="50" alt="Help_picture" src="https://github.com/user-attachments/assets/498e33cd-80a1-4f57-a6f1-7e82978b67b6" /> saves a local copy of the bundled help PDF.
 
 
 
