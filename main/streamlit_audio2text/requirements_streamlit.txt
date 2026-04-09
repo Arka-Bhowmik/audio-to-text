@@ -1,0 +1,5 @@
+streamlit
+faster-whisper
+python-docx
+pandas
+streamlit-mic-recorder
