@@ -5,11 +5,8 @@ This repository contains the source scripts and a lightweight CPU-based Streamli
 
 Further information can be obtained by writing to Arka Bhowmik (arkabhowmik@yahoo.co.uk).
 
-![desktop_app](https://github.com/user-attachments/assets/c6722515-47a0-460f-a253-7b8bc9f323c3)
-
-
 ## ⊞ Windows app (follow the steps below to create the `.exe` file)
-
+![desktop_app](https://github.com/user-attachments/assets/c6722515-47a0-460f-a253-7b8bc9f323c3)
 Users can use the files in `main\win_audio2text\` and follow these steps to create the EXE file.
 
 #### Step I: Download and install Python
@@ -43,20 +40,21 @@ C:\Users\YourName\win_audio2text\dist\AudioToText.exe
 - The app opens directly as a desktop window
 - No browser or Streamlit server is required
 
-##### Note:
-- The EXE is one file, but the Whisper model itself is still downloaded on first use and then cached locally by `faster-whisper`.
-- Default language: `English`
-- Default model: `small.en`
-- Default device: `cpu`
-- Default compute type: `int8`
-- The Help image <img width="30" height="50" alt="Help_picture" src="https://github.com/user-attachments/assets/498e33cd-80a1-4f57-a6f1-7e82978b67b6" /> saves a local copy of the bundled help PDF.
-
-
 
 ## ✨ Streamlit app (follow the steps below to run the app)
+<img width="1464" height="1246" alt="streamlit_app" src="https://github.com/user-attachments/assets/faff7744-138f-4381-9d1c-a6449200b055" />
 
 Users can use the files in `main\streamlit_audio2text\` and follow these steps to run the app.
 ```
 xyz
 ```
 *This will provide an url (e.g., "http://0.0.0.0:5000") for the app that can be copied to the browser of local machine.* In the above command, use an appropriate path for -v "/path/" to mount the raw data or image path of the local machine with the docker container that can be accessed inside docker from /data.
+
+
+##### Note:
+- The Whisper model itself is still downloaded on first use and then cached locally by `faster-whisper`.
+- Available language: `English`
+- Default model: `small.en`
+- Default device: `cpu`
+- Default compute type: `int8`
+- The Help image <img width="30" height="50" alt="Help_picture" src="https://github.com/user-attachments/assets/498e33cd-80a1-4f57-a6f1-7e82978b67b6" /> saves a local copy of the bundled help PDF.
