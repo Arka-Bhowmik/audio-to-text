@@ -16,9 +16,10 @@ Users can simply use the files (main\win_audio2text\) and use following steps to
 #### Step II: Load the downloaded Docker Image 
 Open command prompt(Win)
 ```
-cd C:\Users\Arka\Downloads                  (window command)
-cd /Users/Arka/Downloads/                   (other OS)
-docker load -i mri_triage_app.tar.gz
+python -m venv venv
+venv\Scripts\activate
+cd C:\Users\Arka\win_audio2text\
+build_exe.bat
 ```
 *The image will appear in dashboard of Docker desktop after completion of loading.*
 
