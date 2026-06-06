@@ -3,3 +3,6 @@ faster-whisper
 python-docx
 pandas
 streamlit-mic-recorder
+numpy
+soundcard
+scipy
